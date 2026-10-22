@@ -6,5 +6,7 @@ nav:
 
 asciidoc:
   attributes:
+    lang: ja
+    toctitle: 目次
     experimental: true
     page-pagination: true

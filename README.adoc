@@ -1,36 +1,43 @@
-= OpenShift Dev Day
+= OpenShift Dev Day 日本語版
 
-**OpenShift Dev Day** ワークショップ用の Showroom ラボガイド - 参加者が Parasol Insurance の新しい開発者の役割を演じ、1つのチケットも提出せずにコードから本番環境まで機能をリリースする 90 分間のハンズオン体験です。
+Red Hat OpenShift のハンズオンワークショップを日本語化した Antora / Showroom コンテンツです。
 
-このワークショップは、世界中で対面およびバーチャルのハンズオンイベントを提供する https://www.redhat.com/en/events/red-hat-openshift-roadshows[Red Hat OpenShift Roadshows] シリーズの一部です。各 Roadshow は OpenShift プラットフォームのさまざまな側面をカバーしています。このワークショップは、Developer Hub、Dev Spaces、Pipelines、GitOps、AI 支援コーディングにわたる統合された開発者エクスペリエンスに焦点を当てています。
+* Module 1: 開発者エクスペリエンス
+* Module 2: セキュアなソフトウェアサプライチェーン
+* Module 3: AI のためのアプリケーション接続
+* Module 5: MTA と AI による移行
 
-https://antora.org[Antora] と Red Hat Demo Platform Showroom フレームワークで構築されています。
+== 日本語化の基準
 
-== ドキュメント
+英語版 https://github.com/rhpds/ocp-dev-days-rdshw-showroom[ocp-dev-days-rdshw-showroom] のローカルチェックアウトを基準にしています。画像ファイル、コード、コマンド、入力例、技術的な参照先は保持しています。
 
-完全なドキュメント（入門、コンテンツ構造、設定、ローカル開発、AI 支援コンテンツ作成）は以下で利用できます:
+詳しい対象、原文との差分、実施した確認、既知の確認事項は link:localization/REPORT.md[日本語化・確認結果] を参照してください。翻訳元のコミットとファイルのハッシュは `localization/source-manifest.json` にあります。
 
-https://rhpds.github.io/showroom_template_nookbag/
+== ローカルで確認する
 
-== クイックスタート
+英語版のフォルダをこのリポジトリと同じ親ディレクトリに置き、Node.js と Python 3 を使って以下を実行します。
 
-. https://github.com/rhpds/showroom_template_nookbag/generate[このテンプレートからリポジトリを作成] （推奨命名: `<lab-name>-showroom`）
-. 新しいリポジトリをクローンしてローカルでプレビュー:
-+
 [source,sh]
 ----
-podman run --rm --name antora -v $PWD:/antora -p 8080:8080 -i -t ghcr.io/juliaaano/antora-viewer
+npm ci
+npm run build:preview
+npm run verify:preview
+npm run serve:preview
 ----
-+
-SELinux システムでは、ボリュームマウントに `:z` を追加してください。
 
-. `content/modules/ROOT/pages/` のコンテンツを編集
-. ディレクトリレイアウト、ライブリロード付き Podman Compose、開発モードなどについては、
-https://rhpds.github.io/showroom_template_nookbag/modules/content-repo.html[Content Repository ドキュメント] を参照してください。
+* http://127.0.0.1:8080/ja/modules/index.html[日本語版]
+* http://127.0.0.1:8081/en/modules/index.html[英語版]
 
-== AI でコンテンツを作成
+英語版と日本語版は、進捗の保存領域が混ざらないよう別のポートで開きます。詳しくは link:localization/README.md[ローカル確認と OpenShift 起動後の手順] を参照してください。
 
-https://github.com/rhpds/rhdp-skills-marketplace[RHDP Skills Marketplace] は、Cursor IDE と Claude Code 用のスキルを提供し、ラボやデモを生成し、Red Hat 標準に対してコンテンツを検証します。
+== コンテンツの編集
 
-詳細については、
-https://rhpds.github.io/showroom_template_nookbag/modules/content-repo.html#_creating_content_with_ai_tools[AI Tools ドキュメント] を参照してください。
+公開する本文は `content/modules/ROOT/pages/`、ナビゲーションは `content/modules/ROOT/nav.adoc` にあります。`examples/` は執筆用テンプレートであり、公開ワークショップ本文の翻訳対象には含めていません。
+
+OpenShift 上の反映と手動確認は、環境の起動後に実施します。ローカルプレビューだけでは、実際のサービス接続やラボの完遂は確認できません。
+
+== 参考
+
+* https://rhpds.github.io/showroom_template_nookbag/[Showroom の公式ドキュメント]
+* https://rhpds.github.io/showroom_template_nookbag/modules/content-repo.html[コンテンツリポジトリと開発方法]
+* https://www.redhat.com/en/events/red-hat-openshift-roadshows[Red Hat OpenShift Roadshows]

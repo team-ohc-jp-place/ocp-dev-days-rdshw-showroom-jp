@@ -1,0 +1,14 @@
+{
+  "name": "openshift-dev-day-japanese-preview",
+  "private": true,
+  "scripts": {
+    "build:preview": "node localization/build.mjs",
+    "serve:preview": "node localization/serve.mjs",
+    "verify:preview": "python3 localization/verify.py && node localization/verify-scripts.cjs"
+  },
+  "devDependencies": {
+    "antora": "3.1.15",
+    "@sntke/antora-mermaid-extension": "0.0.13",
+    "js-yaml": "4.1.1"
+  }
+}

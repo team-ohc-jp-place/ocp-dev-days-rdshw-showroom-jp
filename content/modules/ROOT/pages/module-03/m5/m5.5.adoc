@@ -1,0 +1,21 @@
+:page-title: ラボ 5: まとめ
+:imagesdir: ../../assets/images
+:page-time: 1
+include::partial$style.adoc[]
+
+
+[#_summary]
+== まとめ
+
+
+
+最後の段階が完了しました。顧客プロファイル分析で、階層別の AI 消費量を管理するガバナンス層を追加できました。
+
+[#_key_takeaways]
+=== 重要なポイント
+
+* **_Connectivity Link_ のポリシーは _Gateway API_ リソースに付与します**。HTTPRoute や Gateway を対象とし、AI エージェントやアプリケーションコードの変更は不要です。
+* **ポリシーを組み合わせます**。AuthPolicy が抽出した ID を TokenRateLimitPolicy が階層別予算に使い、Gold / Silver のフォールバックを実現します。
+* **トークンに基づくレート制限** は AI / LLM 向けに設計されており、単純なリクエスト数ではなく、実際の消費に基づいてコストを管理できます。
+* **すべて宣言的で _Kubernetes_ ネイティブです**。`oc` で管理する YAML リソースなので、バージョン管理、レビュー、自動化を容易に行えます。
+* **連携ツールが AI の基盤になります**。各モジュールで確認した _Apache Camel_、_Kafka_、Service Interconnect、_Connectivity Link_ などの堅牢な接続ツールが、日々の業務に AI を組み込むための安全な基盤を提供します。

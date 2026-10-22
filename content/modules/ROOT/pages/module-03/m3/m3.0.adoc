@@ -1,0 +1,64 @@
+:page-title: ラボ 3: はじめに
+:imagesdir: ../../assets/images
+:page-time: 2
+include::partial$style.adoc[]
+
+[id='lab3-introduction']
+== はじめに
+
+Apache Kafka を通じて Matrix と Rocket.Chat をつなぐ連携フローを構築し、新しいシステムを追加できる、疎結合でイベント駆動型の構成を作ります。
+
+{empty} +
+
+
+[#_quick_reminder]
+=== シナリオの確認
+
+顧客は *Matrix* から保険申込について問い合わせ、サポート担当者は *Rocket.Chat* から返信します。両者を接続し、メッセージが円滑に流れるようにすることが目標です。
+
+{empty} +
+
+[#_why_kafka_in_the_middle]
+=== なぜ間に Kafka を置くのでしょうか
+
+Matrix と Rocket.Chat を直接つなぐ代わりに、ストリーミング基盤として *Kafka* を配置します。これにより両者を疎結合にし、互いの存在を意識せず、それぞれが Kafka 経由でメッセージを発行、受信できます。
+
+この構成なら、ヘルプデスク、通知サービス、AI エージェントなど、新しいシステムも同じ Kafka Topic に接続できます。既存フローを変更する必要はありません。
+
+{blank}
+
+[.text-center]
+image::module-03/m3/data-flow.png[width=90%]
+
+{empty} +
+
+[#_a_common_data_model]
+=== 共通のデータモデル
+
+Kafka 上の共通言語として *標準データモデル* を採用します。Matrix と Rocket.Chat の固有の形式を直接変換せず、各フローで以下の 2 段階の変換を行います。
+
+* *受信*: プラットフォーム固有の形式 → 標準データモデル (Kafka へ)
+* *送信*: 標準データモデル → プラットフォーム固有の形式 (Kafka から)
+
+各システムは他の全システムと個別に接続するのではなく、*1 つの* 共通インターフェースに接続します。
+
+{blank}
+
+[.text-center]
+image::module-03/m3/standard-data-model.png[width=90%]
+
+{empty} +
+
+[#_four_flows_one_pattern]
+=== 4 つのフローに共通するパターン
+
+Kafka 経由で Matrix と Rocket.Chat を双方向に接続するには、4 つのフローが必要です。
+
+* Matrix → Kafka
+* Kafka → Rocket.Chat
+* Rocket.Chat → Kafka
+* Kafka → Matrix
+
+TIP: 直接つなぐより手間が多く見えますが、4 つとも同じパターンです。このラボでは *1 つ* を構築します。残りも同じ方法で構築でき、最後にすべてを有効にします。
+
+{empty} +

@@ -1,0 +1,73 @@
+:page-title: ラボ 2: Rocket.Chat への参加
+:imagesdir: ../../assets/images
+:page-time: 1
+include::partial$style.adoc[]
+
+[id="rocketchat-chat"]
+== Rocket.Chat への参加
+
+{empty} +
+
+[#_join_your_rocket_chat_room]
+=== 自分の Rocket.Chat ルームに参加する
+
+{blank}
+
+. _Rocket.Chat_ の Web クライアントを開きます。
++
+以下のリンクで _Rocket.Chat_ のログインページを新しいタブに開きます。
++
+--
+- link:{url-rocketchat}[Rocket.Chat ログインページ,window="_blank"]
+--
++
+{empty} +
+
+. 以下のように、認証情報の入力を求められます。
++
+image::module-03/m2/rchat-login-credentials.png[width=50%]
++
+{blank}
++
+====
+. 以下を入力します。
++
+* **Email or username**
++
+[.copypaste.value]
+****
+{user-username}
+****
++
+* **Password**
++
+[.copypaste.value]
+****
+[.path]
+/credentials/im
+
+[.default]
+password
+
+REPLACE
+****
++
+{empty} +
++
+. **_"Login"_** をクリックします
+====
++
+{empty} +
+
+. ログインすると _Rocket.Chat_ のホーム画面が開き、以下のように左側のパネルに自分のルームが表示されます。
++
+image::module-03/m2/rchat-room.png[width=60%]
+
+{empty} +
+
+[.verification]
+****
+_Rocket.Chat_ のルームに参加できましたか。
+****
+
+{empty} +

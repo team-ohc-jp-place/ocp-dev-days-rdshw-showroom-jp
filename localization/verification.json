@@ -1,0 +1,535 @@
+{
+  "reviewed_formatting_fixes": [
+    {
+      "page": "modules/module-05/module-05-03-configure-mta-extension.html",
+      "inline_code_removed": [
+        "quarkus-profile`",
+        "quarkus, `quarkus3+, `jakarta-ee`",
+        ", `quarkus3+"
+      ],
+      "inline_code_added": [
+        "quarkus-profile",
+        "quarkus",
+        "quarkus3+",
+        "jakarta-ee"
+      ],
+      "reason": "Corrected extra backticks already present in the English source; profile and technology values are unchanged."
+    }
+  ],
+  "theme_sha256": {
+    "23f062bdc5cf61a5e56947900fe890455fe21bd8.zip": "73e3a16a4ebdf6139e64ef8cda3cde8e4b20374bc9be19faf929945d2153502b"
+  },
+  "source_commit": "49ef5dd1809feb6ce7dab60140342eba9622cedb",
+  "source_pages_checked": 61,
+  "images_checked": 310,
+  "html_pages_checked": 45,
+  "errors": [],
+  "formatting_and_link_differences_to_review": [],
+  "upstream_broken_links": [
+    {
+      "page": "modules/index.html",
+      "links": [
+        [
+          "../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-01/00-intro.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-01/01-environment.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-01/02-developer-experience.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-02/00-intro.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-02/01-vulnerabilities.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-02/01a-environment.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-02/02-commit-signing.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-02/03-sandbox-pipeline.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-02/04-promotion.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-02/05-namespace-security.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/index.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/intro/intro.1.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/intro/intro.2.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m1/m1.0.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m1/m1.1.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m1/m1.2.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m1/m1.3.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m2/m2.0.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m2/m2.1.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m2/m2.2.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m2/m2.3.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m3/m3.0.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m3/m3.1.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m3/m3.2.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m3/m3.3.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m4/m4.0.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m4/m4.1.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m4/m4.2.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m4/m4.3.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m4/m4.4.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m5/m5.0.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m5/m5.1.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m5/m5.2.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m5/m5.3.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m5/m5.4.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-03/m5/m5.5.html",
+      "links": [
+        [
+          "../../../_/img/favicon.ico",
+          "missing file"
+        ],
+        [
+          "./",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-01-goals.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-02-introduction.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-03-configure-mta-extension.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-04-mdb-to-reactive-messaging.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-05-custom-rules-audit-logging.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-06-stateless-ejb-to-cdi.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-07-quarkus-branch-deploy.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    },
+    {
+      "page": "modules/module-05/module-05-logging.html",
+      "links": [
+        [
+          "../../_/img/favicon.ico",
+          "missing file"
+        ]
+      ]
+    }
+  ]
+}

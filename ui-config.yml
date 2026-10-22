@@ -12,12 +12,11 @@ tabs:
   - name: OpenShift Console
     url: 'https://console-openshift-console.${DOMAIN}'
 
-  - name: Terminal
-    path: /wetty
-    port: 443
+  - name: Dev Spaces
+    url: 'https://devspaces.${DOMAIN}'
 
   - name: GitLab
-    url: 'https://gitlab-gitlab.${DOMAIN}'
+    url: 'https://gitlab-gitlab.${DOMAIN}/dashboard/projects/personal#'
 
   - name: Developer Hub
     url: 'https://backstage-developer-hub-rhdh.${DOMAIN}'

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+{{> head defaultPageTitle='Untitled'}}
+    <style>html[lang="ja"] nav.pagination .prev::before { content: "前へ"; } html[lang="ja"] nav.pagination .next::before { content: "次へ"; }</style>
+  </head>
+  <body class="article{{#with (or page.attributes.role page.role)}} {{{this}}}{{/with}}">
+<a class="skip-link" href="#content">本文へ移動</a>
+{{> header}}
+{{> body}}
+{{> footer}}
+  </body>
+</html>

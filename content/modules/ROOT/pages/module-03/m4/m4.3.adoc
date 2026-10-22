@@ -1,0 +1,10 @@
+:page-title: ラボ 4: フローを完成させる
+:imagesdir: ../../assets/images
+:page-time: 5
+include::partial$style.adoc[]
+
+[id='lab4-complete-flow']
+== フローを完成させる
+
+
+{empty} +

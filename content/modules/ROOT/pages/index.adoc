@@ -1,41 +1,50 @@
-= OpenShift Dev Day
+= OpenShift Dev Day Roadshow
+include::partial$_attributes.adoc[]
 
-OpenShift Dev Day へようこそ -- Red Hat OpenShift 上で完全な開発者ジャーニーを体験できるハンズオンワークショップです。
+OpenShift Dev Day Roadshow へようこそ。Red Hat OpenShift で、現代的なアプリケーション開発とシステム連携を体験するハンズオンワークショップです。
 
-== 学べること
+[#_available_modules]
+== 利用できるモジュール
 
-このワークショップでは、以下のことを学びます:
+各モジュールは独立しており、単独で取り組めます。複数のモジュールを通じて、OpenShift の機能を幅広く学ぶこともできます。
 
-* セルフサービス型の内部開発者ポータルとして Red Hat Developer Hub を探索する
-* ソフトウェアカタログを使用してアプリケーション、API、ドキュメントを見つける
-* Red Hat OpenShift Dev Spaces で事前設定されたクラウド開発環境を起動する
-* AI コーディングアシスタントを使用して機能を構築する
-* OpenShift Pipelines で自動化された CI/CD パイプラインを通じてコードをプッシュする
-* Red Hat OpenShift GitOps (Argo CD) を使用して GitOps で本番環境にデプロイする
-* Developer Hub と OpenShift Console からアプリケーションをデバッグおよびモニタリングする
+[.tile]
+****
+xref:module-01/00-intro.adoc[Module 1: 開発者エクスペリエンス]
 
-== 対象者
+Developer Hub によるセルフサービスの利用開始から、Dev Spaces のクラウド開発、AI コーディング支援、自動 CI/CD、GitOps による本番デプロイまで、OpenShift の開発者ジャーニー全体を体験します。
 
-このワークショップは、OpenShift が提供する統合された開発者エクスペリエンス -- コードから本番環境まで -- を理解したい開発者、プラットフォームエンジニア、IT 意思決定者向けに設計されています。
+**所要時間**: 約 90 分
+****
 
-**経験レベル** : 初級から中級。OpenShift の事前経験は必要ありません。
+[.tile]
+****
+xref:module-02/00-intro.adoc[Module 2: セキュアなソフトウェアサプライチェーン]
 
-== ワークショップ環境
+RHDA と ACS の脆弱性スキャン、Sigstore のキーレスコミット署名、Tekton Chains のアテステーション、Conforma のポリシー検証、署名付きリリース承認、Policy Controller のデプロイ制御を使い、SLSA Level 3 に準拠したサプライチェーンでアプリケーションを構築、デプロイします。
 
-必要なものはすべて事前にプロビジョニングされています。ラボ環境には以下が含まれます:
+**所要時間**: 約 90 分
+****
 
-* Developer Hub、Dev Spaces、Pipelines、GitOps が事前設定された OpenShift クラスタ
-* すべてのワークショップリソースにアクセスできるユーザーアカウント
-* 新しい機能で拡張するサンプルアプリケーション (Parasol Insurance)
+[.tile]
+****
+xref:module-03/index.adoc[Module 3: AI のためのアプリケーション接続]
 
-クレデンシャルはラボインターフェースで利用できます。
+Red Hat の連携技術で AI 向けデータフローを構築します。Service Interconnect による EDI の取り込み、Kafka と Matrix / Rocket.Chat によるイベント駆動メッセージング、Agentic Apache Camel の AI サポート、Connectivity Link の LLM ガバナンスを体験します。
 
-== 所要時間
+**所要時間**: ラボごとに異なります
+****
 
-このワークショップの完了には約 **90 分** かかります。
+[.tile]
+****
+xref:module-05/module-05-01-goals.adoc[Module 5: MTA と AI による移行]
 
-自分のペースで作業できます。
+Red Hat Developer Lightspeed for Migration Toolkit for Applications (MTA) の静的解析、AI によるリファクタリング、カスタムルール、OpenShift へのデプロイを使い、従来の Java EE / EAP アプリケーションを Quarkus に移行します。
 
+**所要時間**: 約 30 分
+****
+
+[#_getting_started]
 == 始めましょう
 
-ナビゲーションの **ワークショップ概要** をクリックして開始してください。
+上のモジュールを選択して開始してください。各モジュールに、導入、環境の詳細、学習目標があります。

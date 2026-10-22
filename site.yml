@@ -10,12 +10,14 @@ content:
       start_path: content
 
 ui:
+  supplemental_files: ./ui-supplemental
   bundle:
     url: https://github.com/rhpds/rhdp_showroom_theme/releases/download/latest/ui-bundle.zip
     snapshot: true
 
 antora:
   extensions:
+    - require: ./localization/redirects.cjs
     - require: '@sntke/antora-mermaid-extension'
       mermaid_library_url: https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs
       script_stem: header-scripts

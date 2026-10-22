@@ -1,0 +1,154 @@
+= Section 3: Dev Spaces へのアクセスと MTA 拡張機能の設定
+include::partial$_attributes.adoc[]
+:imagesdir: ../../assets/images
+
+[IMPORTANT]
+====
+このラボでは、VS Code ベースの GUI を提供する Red Hat Dev Spaces で、**Migration Toolkit for Applications** の Visual Studio Code 拡張機能 (**MTA 拡張機能**) を使います。
+
+**Developer Lightspeed** は、MTA の AI リファクタリング機能であり、独立した拡張機能ではありません。IDE にインストールする **MTA 拡張機能** に、静的コード解析と Developer Lightspeed (生成 AI) の両方が含まれます。
+====
+
+[#_goal]
+== 目標
+
+以降のラボに向け、OpenShift Dev Spaces のワークスペース (`mta-lab`) と MTA 拡張機能を準備します。
+
+* 自分の GitLab からクローンされた `parasol-insurance-eap` プロジェクトを開く
+* 移行元・移行先の技術を指定する移行プロファイルを作成する
+* GenAI / `provider-settings.yaml` の設定で、Developer Lightspeed がラボの LLM に接続できることを確認する
+
+用意された開発環境を開き、Developer Lightspeed (AI) を含む MTA 拡張機能を設定して、Parasol Insurance の `parasol-insurance-eap` をモダナイズします。
+
+[#_exercise_1_open_dev_spaces_and_log_in]
+== 演習 1: Dev Spaces を開いてログインする
+
+. ワークショップ画面の **OpenShift Dev Spaces** タブをクリックします。
+
+. OpenShift の認証情報で Dev Spaces にログインします。
++
+NOTE: 最初の画面は Keycloak SSO のログインページです。
++
+--
+ユーザー名:
+[source,subs="attributes",role="copypaste"]
+----
+{user}
+----
+パスワード:
+[source,subs="attributes",role="copypaste"]
+----
+{password}
+----
+--
+
+. ログイン後、__Authorize Access__ が表示された場合:
++
+* **Allow selected permissions** ボタンをクリックします
++
+image::module-05-mta-dls/05-03-dls-01.jpg[Dev Spaces のログイン,link=self,window=blank,title="ログイン"]
++
+CAUTION: 再認証を求められた場合は、ブラウザの更新アイコンではなく、ワークショップ画面の **OpenShift Dev Spaces** タブに戻ります。ワークスペースの一覧から **mta-lab** を開き直せます。
+
+. **mta-lab** ワークスペースを開きます
++
+* ログイン後の一覧に、自分用に作成された **mta-lab** が表示されます
+* 一覧の右側の **Open** リンクをクリックします
++
+image::module-05-mta-dls/05-03-dls-02.jpg[ワークスペースを開く,link=self,window=blank,title="ワークスペースを開く"]
+
+. 初期化が終わり、ワークスペースが開くまで待ちます。
++
+自分の GitLab の **parasol-insurance-eap** リポジトリが読み込まれ、開発環境が利用可能になります。
++
+ワークスペースは新しいブラウザタブに開きます。
++
+* 発行元やワークスペースを信頼するか確認されたら、信頼を許可します (図 3)
+* 初回設定パネルが表示されたら、この後の画面を見やすくするため **Light** テーマを選び、**Mark Done** をクリックします。初回設定を閉じ、以下の画像の手順 2 のように左側の拡張機能アイコンをクリックしてインストール済み一覧を開きます (図 4)
++
+image::module-05-mta-dls/05-03-dls-05.png[VS Code のタブ,link=self,window=blank,title="プロファイルの管理"]
++
+image::module-05-mta-dls/05-03-dls-03.png[VS Code のタブ,link=self,window=blank,title="設定の完了"]
+
+拡張機能のインストールに時間がかかる場合があります。Reload Window ボタンが表示されたらクリックします。タブが自動で再読み込みされます。
+
+image::module-05-mta-dls/05-03-dls-04.png[VS Code のタブ,link=self,window=blank,title="作成者を信頼"]
+
+
+[#_exercise_2_configure_mta_profiles_and_genai_provider]
+== 演習 2: MTA のプロファイルと GenAI プロバイダを設定する
+
+開発環境が準備できました。分析プロファイルの設定に進みます。
+
+MTA 拡張機能では複数の分析プロファイルを管理、切り替えできます。以下の画像の手順 3 の「New Profile」で、新しいプロファイルを作成できます。
+
+最初に、Quarkus への移行用の `quarkus-profile` を作成します。xref:module-05/module-05-05-custom-rules-audit-logging.adoc[Section 5: カスタムルール (監査ログ)] で、監査ログのカスタムルールを扱います。
+
+`Manage Profiles` をクリックし、管理パネルを開きます。
+
+image::module-05-mta-dls/05-03-dls-06.png[VS Code のタブ,link=self,window=blank,title="VS Code のタブ"]
+
+- `quarkus-profile` というプロファイルを作成します
+- Profile Name: `quarkus-profile`
+- Target Technologies: `quarkus`、`quarkus3+`、`jakarta-ee`
+
+image::module-05-mta-dls/05-03-dls-07.png[VS Code のタブ,link=self,window=blank,title="プロファイルの確認"]
+
+最初のプロファイルなので、DLS 拡張機能が自動で有効にします。
+
+上記の設定が正しいことを確認し、タブを閉じます。
+
+
+上の画像で **Open Analysis** の隣にあるコントロールをクリックし、以下の手順に進みます。
+次の画像のように、MTA パネルから GenAI プロバイダの設定を開きます。
+
+- *1* 設定の `⚙︎` アイコンをクリックします。
+- *2* `Configure GenAI Settings` をクリックします
+
+image::module-05-mta-dls/05-03-dls-08.png[VS Code のタブ,link=self,window=blank,title="GenAI プロバイダの設定"]
+
+プロバイダ設定が開きます。MTA は **provider-settings.yaml** で LLM に接続します。
+
+ラボにはプロバイダ設定と LiteLLM の認証情報が設定済みです。**OpenShift** モデルが有効で、base URL と API key に環境に合った値が入っていることを確認します。
+
+TIP: 通常は設定済みです。ワークスペースのリセット後など、ファイルが空または不完全な場合に限り、以下の YAML で復旧してください。通常の手順で必要になる操作ではありません。
+
+[.console-input]
+[source,yaml,subs="+attributes,macros+"]
+----
+models:
+  OpenShift: &active
+    environment:
+      OPENAI_API_KEY: "{litellm_virtual_key}"
+    provider: ChatOpenAI
+    args:
+      model: "qwen3-235b"
+      configuration:
+        baseURL: "{litellm_api_base_url}"
+active: *active
+----
+
+各フィールドの内容を確認します。
+
+- `OPENAI_API_KEY`: OpenShift AI 上でホストする LLM のキーです
+- `model`: 使用するモデル名です
+- `baseURL`: Chat Completions API の要求を受け付ける URL / Route です
+- `active`: このプロファイルが有効か確認します。MTA は複数の LLM を設定できますが、同時に有効にできるのは 1 つです。
+
+image::module-05-mta-dls/05-03-dls-09.png[VS Code のタブ,link=self,window=blank,title="VS Code のタブ"]
+
+[#_verify]
+== 確認
+
+Dev Spaces と、Developer Lightspeed を含む MTA 拡張機能が正しく設定されたことを確認します。
+
+. MTA 拡張機能の設定を確認します
+* MTA 拡張機能のアイコンを選択し、MTA Analysis View タブを開きます
+* 画面右側の歯車アイコンをクリックします
+* 右側に **Get Ready to Analyze** パネルが開きます
+* 4 つのメッセージボックスすべてに緑のチェックが付き、完了と表示されることを確認します
+
+. 正しいリポジトリを開いていることを確認します
+* Dev Spaces 左側のファイルアイコンをクリックします
+* _EXPLORER_ に、共有サンプルではなく自分の GitLab の **parasol-insurance-eap** が表示されます
+* 必要に応じてフォルダを展開し、`com.parasol.mdb` (`EmailIntakeMDB`) や `com.parasol.ejb` (`ClaimService`) などを確認します

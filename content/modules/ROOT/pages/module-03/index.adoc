@@ -1,0 +1,84 @@
+:page-title: AI のためのアプリケーション接続
+:imagesdir: ../assets/images
+include::partial$style.adoc[]
+
+++++
+<style>.pagination, .nav-footer { display: none !important; }</style>
+++++
+
+[#_application_connectivity_for_ai]
+== AI のためのアプリケーション接続
+
+__AI のためのアプリケーション接続__ へようこそ。このモジュールでは、Red Hat のツールと技術を使い、AI 向けのデータフローを構築する方法を幅広く学びます。AI が初めての方も、経験豊富な開発者も、AI アプリケーションを支える効率的でセキュアなデータフローの作成を体験できます。
+
+[TIP]
+--
+各セクションは前の内容を踏まえているため、順に進めることをお勧めします。段階的に知識とスキルを身に付けられますが、関心のあるセクションだけを選んでも構いません。
+--
+
+以下から開始する項目を選択してください。
+
+[.tile]
+****
+xref:module-03/intro/intro.1.adoc[はじめに]
+
+ワークショップの目的、使用技術、シナリオを確認し、開発環境を準備します。
+****
+
+[.tile]
+****
+xref:module-03/m1/m1.0.adoc[ラボ 1 -- 取り込みサービス]
+
+EDI 形式の保険申込データを取り込み、変換してバックエンドデータベースに保存し、PDF の保険証券を生成します。Service Interconnect によるセキュアなクラスタ間接続を使います。
+****
+
+[.tile]
+****
+xref:module-03/m2/m2.0.adoc[ラボ 2 -- メッセージングへのアクセス]
+
+Matrix と Rocket.Chat に参加し、両方のメッセージングシステムをつなぐ最初の連携フローを確認します。
+****
+
+[.tile]
+****
+xref:module-03/m3/m3.0.adoc[ラボ 3 -- マルチチャネルハブ]
+
+Kafka を基盤としてメッセージング構成を疎結合にし、標準データモデルを導入して、イベント駆動型のソリューション全体を OpenShift にデプロイします。
+****
+
+[.tile]
+****
+xref:module-03/m4/m4.0.adoc[ラボ 4 -- AI カスタマーサポート]
+
+Agentic Apache Camel と MaaS で処理を統合し、Rocket.Chat 内の自然言語で保険契約の問題を解決する AI サポートエージェントを構築します。
+****
+
+[.tile]
+****
+xref:module-03/m5/m5.0.adoc[ラボ 5 -- LLM ガバナンス]
+
+Red Hat Connectivity Link で LLM へのアクセスを保護、管理します。ユーザーのサービス階層ごとに API キー認証とトークンに基づくレート制限を適用します。
+****
+
+[TIP]
+--
+モジュール間の移動には左側のパネルを使用します。表示されていない場合は、左上のメニューアイコンをクリックして開いてください。
+
+{blank}
+
+.操作方法を表示
+[%collapsible]
+====
+左上のメニューアイコンをクリックしてナビゲーションパネルを開きます。
+
+[.bordered]
+image::module-03/index/showroom-nav-header.png[左上のメニューアイコン, width=50%]
+
+{blank}
+
+開始するモジュールを選択します。
+
+[.bordered]
+image::module-03/index/showroom-left-nav.png[モジュール一覧の左ナビゲーション, width=50%]
+====
+--
