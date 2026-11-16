@@ -219,7 +219,7 @@ image::m02-rhda-shield-button.png[Botón del escudo en la barra de estado para a
 +
 [source,xml,role="copypaste"]
 ----
-<quarkus.platform.version>3.40.1</quarkus.platform.version>
+<quarkus.platform.version>3.40.1.2</quarkus.platform.version>
 ----
 
 . Después de que se guarde automáticamente el archivo, espera a que termine el análisis. El recuento de vulnerabilidades debería reducirse a solo unas pocas.

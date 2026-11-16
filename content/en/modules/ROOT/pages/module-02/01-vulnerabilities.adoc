@@ -219,7 +219,7 @@ image::m02-rhda-shield-button.png[Shield button in the status bar to open RHDA r
 +
 [source,xml,role="copypaste"]
 ----
-<quarkus.platform.version>3.40.1</quarkus.platform.version>
+<quarkus.platform.version>3.40.1.2</quarkus.platform.version>
 ----
 
 . After auto-save wait for the analysis to complete. The vulnerability count should drop to just a handful.

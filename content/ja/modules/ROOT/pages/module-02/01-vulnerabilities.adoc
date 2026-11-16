@@ -219,7 +219,7 @@ image::m02-rhda-shield-button.png[RHDA レポートを開くステータスバ�
 +
 [source,xml,role="copypaste"]
 ----
-<quarkus.platform.version>3.40.1</quarkus.platform.version>
+<quarkus.platform.version>3.40.1.2</quarkus.platform.version>
 ----
 
 . 自動保存後、分析が完了するまで待ちます。脆弱性の数が数件程度まで減るはずです。
