@@ -1,0 +1,13 @@
+name: modules
+title: OpenShift Dev Day
+version: ja
+display_version: 日本語
+prerelease: false
+nav:
+  - modules/ROOT/nav.adoc
+
+asciidoc:
+  attributes:
+    experimental: true
+    page-pagination: true
+    page-lang: ja

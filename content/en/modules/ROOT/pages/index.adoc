@@ -1,0 +1,48 @@
+= OpenShift Dev Day Roadshow
+include::partial$_attributes.adoc[]
+
+Welcome to the OpenShift Dev Day Roadshow -- a collection of hands-on workshops where you experience modern application development and integration on Red Hat OpenShift.
+
+== Available Modules
+
+This roadshow consists of independent modules. Each module can be completed on its own, or you can work through multiple modules to gain a comprehensive understanding of OpenShift's capabilities.
+
+[.tile]
+****
+xref:module-01/00-intro.adoc[Module 1: The Developer Experience]
+
+Experience the full developer journey on OpenShift -- from self-service onboarding through Developer Hub, cloud-based development with Dev Spaces, AI-assisted coding, automated CI/CD pipelines, to GitOps-driven production deployments.
+
+**Duration**: ~90 minutes
+****
+
+[.tile]
+****
+xref:module-02/00-intro.adoc[Module 2: Secured Software Supply Chain]
+
+Build and deploy applications through a SLSA Level 3 compliant software supply chain -- vulnerability scanning with RHDA and ACS, keyless commit signing with Sigstore, pipeline attestations with Tekton Chains, policy validation with Conforma, signed release approvals, and deployment enforcement with Policy Controller.
+
+**Duration**: ~90 minutes
+****
+
+[.tile]
+****
+xref:module-03/index.adoc[Module 3: Application Connectivity for AI]
+
+Build AI data flows using Red Hat's integration technologies -- EDI ingest with Service Interconnect, event-driven messaging with Kafka and Matrix/Rocket.Chat, Agentic Apache Camel for AI customer support, and LLM governance with Connectivity Link.
+
+**Duration**: Varies by lab
+****
+
+[.tile]
+****
+xref:module-05/module-05-01-goals.adoc[Module 5: AI-powered migration using MTA]
+
+Modernize a legacy Java EE / EAP application toward Quarkus with Red Hat Developer Lightspeed for Migration Toolkit for Applications (MTA) -- static analysis, AI-assisted refactoring, custom rules, and OpenShift deployment.
+
+**Duration**: ~30 minutes
+****
+
+== Getting Started
+
+Select a module above to begin. Each module includes its own introduction, environment details, and learning objectives.
